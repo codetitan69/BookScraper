@@ -1,4 +1,4 @@
-# Scrapy settings for demoBookScraper project
+# Scrapy settings for BookScraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -8,14 +8,14 @@
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 from scrapy.settings.default_settings import FEEDS
 
-BOT_NAME = "demoBookScraper"
+BOT_NAME = "BookScraper"
 
-SPIDER_MODULES = ["demoBookScraper.spiders"]
-NEWSPIDER_MODULE = "demoBookScraper.spiders"
+SPIDER_MODULES = ["BookScraper.spiders"]
+NEWSPIDER_MODULE = "BookScraper.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "demoBookScraper (+http://www.yourdomain.com)"
+#USER_AGENT = "BookScraper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -46,14 +46,14 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
-    "demoBookScraper.middlewares.DemobookscraperSpiderMiddleware": 543,
+    "BookScraper.middlewares.DemobookscraperSpiderMiddleware": 543,
 }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    "demoBookScraper.middlewares.DemobookscraperDownloaderMiddleware": 543,
-    "demoBookScraper.middlewares.RotateUserAgentMiddleware": 400
+    "BookScraper.middlewares.DemobookscraperDownloaderMiddleware": 543,
+    "BookScraper.middlewares.RotateUserAgentMiddleware": 400
 }
 
 # Enable or disable extensions
@@ -65,8 +65,8 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    "demoBookScraper.pipelines.DemobookscraperPipeline": 300,
-    # "demoBookScraper.pipelines.DBpipeline": 400,
+    "BookScraper.pipelines.DemobookscraperPipeline": 300,
+    # "BookScraper.pipelines.DBpipeline": 400,
 }
 
 FEEDS = {
